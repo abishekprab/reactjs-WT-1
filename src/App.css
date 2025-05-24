@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #f6f9fc, #e0eafc);
+  color: #222;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.dark {
+  background: linear-gradient(120deg, #1e1e2f, #2b2b45);
+  color: #eee;
+}
+
+.app-container {
+  position: fixed;        /* Fix position relative to viewport */
+  top: 50%;              /* Move top to middle */
+  left: 50%;             /* Move left to middle */
+  transform: translate(-50%, -50%); /* Offset by half width & height */
+  text-align: center;
+  padding: 2rem;
+  max-width: 900px;
+  width: 90vw;           /* Responsive width */
+  max-height: 90vh;      /* Prevent overflow vertically */
+  overflow-y: auto;      /* Scroll if content too tall */
+  background: inherit;   /* Keep background transparent */
+  animation: fadeIn 1s ease-in-out;
+  transition: background 0.5s ease, color 0.5s ease;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: #5c27fe;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+select, input, button {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+select, input {
+  background-color: #f0f4ff;
+  color: #222;
+  border: 1px solid #ccc;
+}
+
+select:hover, input:focus {
+  border-color: #5c27fe;
+  box-shadow: 0 0 10px rgba(92, 39, 254, 0.3);
+}
+
+button {
+  background-color: #5c27fe;
+  color: white;
+  box-shadow: 0 4px 15px rgba(92, 39, 254, 0.3);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #7048e8;
+}
+
+.project-box {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+body.dark .project-box {
+  background-color: #2e2e40;
+  color: #f0f0f0;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+li {
+  background-color: #efeaff;
+  margin: 0.6rem auto;
+  padding: 1rem 1.2rem;
+  border-radius: 14px;
+  max-width: 400px;
+  box-shadow: 0 3px 8px rgba(92, 39, 254, 0.15);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+body.dark li {
+  background-color: #3b3b55;
+  color: #ddd;
+}
+
+h2 {
+  color: #7048e8;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-top: 1rem;
+}
+
+body.dark p {
+  color: #ddd;
+}
+
+.dark-select {
+  background-color: #2e2e40;
+  color: #eee;
+  border: 1px solid #777;
+}
+
+.dark-select option {
+  background-color: #2e2e40;
+  color: #eee;
+}
+
+.dropdown option {
+  background-color: white;
+  color: #222;
+}
+
+body.dark .dropdown option {
+  background-color: #2e2e40;
+  color: #eee;
+}
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  select, input, button {
+    width: 100%;
+    margin: 0.4rem 0;
+  }
+
+  .project-box {
+    padding: 1rem;
+  }
+}
