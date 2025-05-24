@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className={`app-container`}>
-      <h1>🎯 RaectJS Weekly Projects Showcase</h1>
+      <h1>🎯 ReactJS Weekly Projects Showcase</h1>
       <div className="controls">
         <select className={`dropdown ${darkMode ? 'dark-select' : ''}`} value={selectedProject} onChange={(e) => setSelectedProject(e.target.value)}>
           <option>Grocery List App</option>
